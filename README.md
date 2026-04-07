@@ -71,3 +71,5 @@ User → Frontend (index.html) → Your Backend (/chat) → OpenRouter API
 
 1. GitHub PR link (branch: `feature/ai-chatbot`)
 2. Google Drive video link (Anyone with link can view)
+
+Updated chatbot implementation
