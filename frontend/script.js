@@ -34,7 +34,7 @@ async function sendMessage() {
     // 3. Clear input
     messageInput.value = "";
     try {
-    const res = await fetch("https://ai-chatbot-backend-5it0.onrender.com", {
+    const res = await fetch("https://ai-chatbot-backend-5it0.onrender.com/chat", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
