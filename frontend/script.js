@@ -33,6 +33,24 @@ async function sendMessage() {
 
     // 3. Clear input
     messageInput.value = "";
+    try {
+    const res = await fetch("http://localhost:3000/chat", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ messages })
+    });
+
+    const data = await res.json();
+
+    messages.push({ role: "assistant", content: data.reply });
+
+    renderMessage("assistant", data.reply);
+
+} catch (error) {
+    renderMessage("assistant", "Error connecting to server");
+}
 
     // TODO: Call your backend /chat route here
     // Send the full `messages` array — not just the latest message
